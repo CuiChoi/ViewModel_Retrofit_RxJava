@@ -1,6 +1,7 @@
 package leavesc.hello.weather.core.http.model
 
 import com.google.gson.annotations.SerializedName
+import leavesc.hello.weather.core.http.HttpConfig
 
 /**
  * 作者：leavesC
@@ -8,9 +9,13 @@ import com.google.gson.annotations.SerializedName
  * 描述：
  */
 class BaseResponse<T>(
-    @SerializedName("status") var code: Int = 0,
-    @SerializedName("info") var message: String? = null,
-    @SerializedName("districts", alternate = ["forecasts"]) var data: T
-)
+        @SerializedName("status") var code: Int = 0,
+        @SerializedName("info") var message: String? = null,
+        @SerializedName("districts", alternate = ["forecasts"]) var data: T) {
+
+    val isSuccess: Boolean
+        get() = code == HttpConfig.CODE_SUCCESS || message == "OK"
+
+}
 
 class OptionT<T>(val value: T)

@@ -1,5 +1,6 @@
 package leavesc.hello.weather.core.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import leavesc.hello.weather.core.http.RequestCallback
 import leavesc.hello.weather.core.http.datasource.WeatherDataSource
@@ -26,6 +27,12 @@ class WeatherViewModel : BaseViewModel() {
                 if (data.isNotEmpty()) {
                     forecastsBeanLiveData.value = data[0]
                 }
+            }
+        })
+
+        weatherDataSource.test(object : RequestCallback<String> {
+            override fun onSuccess(data: String) {
+                Log.e("TAG", data)
             }
         })
     }

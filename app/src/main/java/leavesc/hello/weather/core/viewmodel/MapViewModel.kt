@@ -1,7 +1,11 @@
 package leavesc.hello.weather.core.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import kotlinx.coroutines.runBlocking
+import leavesc.hello.weather.core.http.BaseException
 import leavesc.hello.weather.core.http.RequestCallback
+import leavesc.hello.weather.core.http.RequestMultiplyCallback
 import leavesc.hello.weather.core.http.datasource.MapDataSource
 import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
 import leavesc.hello.weather.core.model.DistrictBean
@@ -38,11 +42,16 @@ class MapViewModel : BaseViewModel() {
     val adCodeSelectedLiveData = MutableLiveData<String>()
 
     fun getProvince() {
-        mapDataSource.getProvince(object : RequestCallback<List<DistrictBean>> {
+        mapDataSource.getProvince(object : RequestMultiplyCallback<List<DistrictBean>> {
             override fun onSuccess(data: List<DistrictBean>) {
                 stateLiveData.value = TYPE_PROVINCE
                 provinceLiveData.value = data[0].districts
                 realLiveData.value = data[0].districts
+            }
+
+            override fun onFail(exception: BaseException) {
+                showToast(exception.errorMessage)
+                Log.e("tag", exception.javaClass.name)
             }
         })
     }

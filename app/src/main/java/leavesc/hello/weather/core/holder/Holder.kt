@@ -23,7 +23,7 @@ class ContextHolder {
 class ToastHolder {
 
     companion object {
-        fun showToast(context: Context = ContextHolder.context, msg: String) {
+        fun showToast(msg: String, context: Context = ContextHolder.context) {
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         }
     }

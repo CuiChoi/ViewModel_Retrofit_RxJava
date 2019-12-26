@@ -1,6 +1,5 @@
 package leavesc.hello.weather.core.http.api
 
-import io.reactivex.Observable
 import leavesc.hello.weather.core.http.model.BaseResponse
 import leavesc.hello.weather.core.model.DistrictBean
 import leavesc.hello.weather.core.model.ForecastsBean
@@ -15,15 +14,15 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET("config/district")
-    fun getProvince(): Observable<BaseResponse<List<DistrictBean>>>
+    suspend fun getProvince(): BaseResponse<List<DistrictBean>>
 
     @GET("config/district")
-    fun getCity(@Query("keywords") keywords: String): Observable<BaseResponse<List<DistrictBean>>>
+    suspend fun getCity(@Query("keywords") keywords: String): BaseResponse<List<DistrictBean>>
 
     @GET("config/district")
-    fun getCounty(@Query("keywords") keywords: String): Observable<BaseResponse<List<DistrictBean>>>
+    suspend fun getCounty(@Query("keywords") keywords: String): BaseResponse<List<DistrictBean>>
 
     @GET("weather/weatherInfo?extensions=all")
-    fun getWeather(@Query("city") city: String): Observable<BaseResponse<List<ForecastsBean>>>
+    suspend fun getWeather(@Query("city") city: String): BaseResponse<List<ForecastsBean>>
 
 }

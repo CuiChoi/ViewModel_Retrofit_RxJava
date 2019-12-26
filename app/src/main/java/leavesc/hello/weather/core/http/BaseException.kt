@@ -5,7 +5,7 @@ package leavesc.hello.weather.core.http
  * 时间：2019/5/31 10:48
  * 描述：
  */
-sealed class BaseException(errorMessage: String, val code: Int = HttpConfig.CODE_UNKNOWN) :
-    RuntimeException(errorMessage)
+sealed class BaseException(val errorMessage: String, val code: Int = HttpConfig.CODE_UNKNOWN) :
+        RuntimeException(errorMessage)
 
-class ServerResultException(message: String, code: Int = HttpConfig.CODE_UNKNOWN) : BaseException(message, code)
+class ServerBadException(message: String, code: Int = HttpConfig.CODE_UNKNOWN) : BaseException(message, code)

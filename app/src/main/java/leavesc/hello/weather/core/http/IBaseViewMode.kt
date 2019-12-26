@@ -5,6 +5,7 @@ import android.content.Intent
 import android.widget.Toast
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import kotlinx.coroutines.CoroutineScope
 import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
 import leavesc.hello.weather.core.http.viewmodel.BaseViewModelEvent
 
@@ -28,6 +29,12 @@ interface IBaseViewModelEvent {
     fun finishView()
 
     fun pop()
+
+}
+
+interface IBaseViewModeScope : IBaseViewModelEvent {
+
+    val lViewModelScope: CoroutineScope
 
 }
 
