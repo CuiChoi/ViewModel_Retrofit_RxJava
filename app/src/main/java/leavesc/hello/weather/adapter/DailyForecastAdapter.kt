@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import leavesc.hello.weather.R
-import leavesc.hello.weather.core.model.CastsBean
+import leavesc.hello.core.model.CastsBean
 
 /**
  * 作者：leavesC

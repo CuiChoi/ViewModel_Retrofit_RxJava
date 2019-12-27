@@ -2,10 +2,10 @@ package leavesc.hello.weather.core.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import leavesc.hello.weather.core.http.RequestCallback
-import leavesc.hello.weather.core.http.datasource.WeatherDataSource
-import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
-import leavesc.hello.weather.core.model.ForecastsBean
+import leavesc.hello.core.http.RequestCallback
+import leavesc.hello.core.http.datasource.WeatherDataSource
+import leavesc.hello.core.http.viewmodel.BaseViewModel
+import leavesc.hello.core.model.ForecastsBean
 
 /**
  * 作者：leavesC

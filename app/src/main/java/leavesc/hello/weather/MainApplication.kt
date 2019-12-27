@@ -1,6 +1,7 @@
 package leavesc.hello.weather
 
 import android.app.Application
+import leavesc.hello.core.holder.ContextHolder
 
 /**
  * 作者：leavesC
@@ -11,16 +12,9 @@ import android.app.Application
  */
 class MainApplication : Application() {
 
-    companion object {
-
-        lateinit var context: MainApplication
-            private set
-
-    }
-
     override fun onCreate() {
         super.onCreate()
-        context = this
+        ContextHolder.context = this
     }
 
 }

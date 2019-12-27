@@ -2,13 +2,12 @@ package leavesc.hello.weather.core.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import kotlinx.coroutines.runBlocking
-import leavesc.hello.weather.core.http.BaseException
-import leavesc.hello.weather.core.http.RequestCallback
-import leavesc.hello.weather.core.http.RequestMultiplyCallback
-import leavesc.hello.weather.core.http.datasource.MapDataSource
-import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
-import leavesc.hello.weather.core.model.DistrictBean
+import leavesc.hello.core.http.BaseException
+import leavesc.hello.core.http.RequestCallback
+import leavesc.hello.core.http.RequestMultiplyCallback
+import leavesc.hello.core.http.datasource.MapDataSource
+import leavesc.hello.core.http.viewmodel.BaseViewModel
+import leavesc.hello.core.model.DistrictBean
 
 /**
  * 作者：leavesC

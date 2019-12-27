@@ -9,8 +9,8 @@ import kotlinx.android.synthetic.main.layout_top_bar.*
 import leavesc.hello.weather.R
 import leavesc.hello.weather.adapter.PlaceAdapter
 import leavesc.hello.weather.core.cache.AreaCache
-import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
-import leavesc.hello.weather.core.model.DistrictBean
+import leavesc.hello.core.http.viewmodel.BaseViewModel
+import leavesc.hello.core.model.DistrictBean
 import leavesc.hello.weather.core.view.BaseActivity
 import leavesc.hello.weather.core.viewmodel.MapViewModel
 import leavesc.hello.weather.widget.CommonItemDecoration

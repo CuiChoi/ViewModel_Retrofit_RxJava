@@ -7,9 +7,9 @@ import kotlinx.android.synthetic.main.activity_weather.*
 import leavesc.hello.weather.R
 import leavesc.hello.weather.adapter.WeatherAdapter
 import leavesc.hello.weather.core.cache.AreaCache
-import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
-import leavesc.hello.weather.core.model.CastsBean
-import leavesc.hello.weather.core.model.ForecastsBean
+import leavesc.hello.core.http.viewmodel.BaseViewModel
+import leavesc.hello.core.model.CastsBean
+import leavesc.hello.core.model.ForecastsBean
 import leavesc.hello.weather.core.view.BaseActivity
 import leavesc.hello.weather.core.viewmodel.WeatherViewModel
 

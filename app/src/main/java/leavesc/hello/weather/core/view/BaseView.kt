@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProviders
-import leavesc.hello.weather.core.http.IIBaseViewModelEventObserver
-import leavesc.hello.weather.core.http.viewmodel.BaseViewModel
+import leavesc.hello.core.http.IIBaseViewModelEventObserver
+import leavesc.hello.core.http.viewmodel.BaseViewModel
 
 /**
  * 作者：leavesC
